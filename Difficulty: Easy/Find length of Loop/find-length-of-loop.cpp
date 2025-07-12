@@ -13,10 +13,11 @@ class Solution {
   public:
     // Function to find the length of a loop in the linked list.
     int countNodesinLoop(Node *head) {
-        Node* slow=head;
         Node* fast=head;
+        Node* slow=head;
         int count=0;
-        while(fast!=NULL && fast->next!=NULL){
+        if(head==nullptr) return 0;
+        while(fast!=nullptr && fast->next!=nullptr){
             slow=slow->next;
             fast=fast->next->next;
             if(slow==fast){
@@ -29,6 +30,6 @@ class Solution {
                 return count;
             }
         }
-        return 0;
+        return count;
     }
 };
