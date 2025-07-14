@@ -11,6 +11,5 @@ class Solution {
             dp[i]=max(dp[i-1],arr[i]+dp[i-2]);
         }
         return dp[arr.size()-1];
-        
     }
 };
