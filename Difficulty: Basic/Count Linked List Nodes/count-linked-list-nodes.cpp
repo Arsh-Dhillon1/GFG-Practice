@@ -11,14 +11,13 @@ class Solution {
   public:
     // Function to count nodes of a linked list.
     int getCount(struct Node* head) {
+        Node* temp=head;
+        if(head==nullptr) return 0;
         int count=0;
-        Node* current=head;
-        while(current!=NULL){
+        while(temp!=nullptr){
             count++;
-            current=current->next;
+            temp=temp->next;
         }
-        // Code here
         return count;
-        
     }
 };
